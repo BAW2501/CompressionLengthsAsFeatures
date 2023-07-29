@@ -27,3 +27,7 @@ def fast_ncd_cdist(x1,x2):
             max_len = max(len_x1sample[i], len_x2sample[j])
             dist_mat[i][j] = (compressed_len_ij - min_len) / max_len
     return dist_mat
+
+
+train_ncd = fast_ncd_cdist(train_x,train_x)
+test_ncd = fast_ncd_cdist(test_x, train_x)
